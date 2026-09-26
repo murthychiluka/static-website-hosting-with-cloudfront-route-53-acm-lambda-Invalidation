@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anil Jadhav | AWS Cloud Architecture</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #ffffff;
+    }
+
+    header {
+        background: #111827;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #f59e0b;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero img {
+        width: 90%;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .content {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 6px;
+        background: #f59e0b;
+        color: #111827;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: #fbbf24;
+    }
+
+    .version {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #9ca3af;
+    }
+
+    footer {
+        background: #111827;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #9ca3af;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    🚀 aniljadhav.co.in - AWS Serverless Architecture
+</header>
+
+<div class="hero">
+    <h2>Hosted on AWS with CloudFront CDN</h2>
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Cloud Image">
+</div>
+
+<div class="content">
+    <h2>Architecture Components</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=600" alt="Cloud">
+            <h3>Amazon S3</h3>
+            <p>Private bucket serving static content.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=600" alt="CDN">
+            <h3>CloudFront CDN</h3>
+            <p>Global caching and HTTPS termination.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=600" alt="Serverless">
+            <h3>AWS Lambda</h3>
+            <p>Auto CloudFront invalidation on upload.</p>
+        </div>
+
+    </div>
+
+    <button onclick="showTime()">Test JavaScript</button>
+    <div id="time"></div>
+
+    <div class="version">
+        Version: 2.0
+    </div>
+
+</div>
+
+<footer>
+    Powered by Route 53 + CloudFront + ACM SSL + Lambda
+</footer>
+
+<script>
+function showTime() {
+    const now = new Date();
+    document.getElementById("time").innerHTML =
+        "Current Time: " + now.toLocaleString();
+}
+</script>
+
+</body>
+</html>
